@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <!-- 
+      1. clear CSS 속성을 이용해서 float의 영향을 받지 않도록 할 수 있습니다.
+
+      하지만, float이 left 를 주면 clear도 left를 줘야 영향을 받지 않습니다. 만약, 서로 left right 다르게 되면 clear도 float 의 영향을 받습니다.
+    -->
+    <style>
+      .div1 {
+        float: left;
+        padding: 10px;
+        border: 3px solid #73ad21;
+      }
+
+      .div2 {
+        padding: 10px;
+        border: 3px solid red;
+      }
+
+      .div3 {
+        float: left;
+        padding: 10px;
+        border: 3px solid #73ad21;
+      }
+
+      .div4 {
+        padding: 10px;
+        border: 3px solid red;
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Without clear</h2>
+    <div class="div1">div1</div>
+    <div class="div2">
+      div2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quia
+      nulla soluta quae vero repudiandae labore totam cumque fugiat hic quasi,
+      sit rem accusantium? Eum facilis deleniti molestiae cum odio.
+    </div>
+
+    <h2>With clear</h2>
+    <div class="div3">div3</div>
+    <div class="div4">
+      div4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quia
+      nulla soluta quae vero repudiandae labore totam cumque fugiat hic quasi,
+      sit rem accusantium? Eum facilis deleniti molestiae cum odio.
+    </div>
+  </body>
+</html>

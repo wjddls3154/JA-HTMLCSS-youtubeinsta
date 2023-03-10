@@ -1,0 +1,43 @@
+/*
+align-items 는 축의 수직 방향을 기준으로 정렬이 됩니다.
+이것은, 현재 줄의 Cross Axis 를 따라, 플렉스 item 이 배치되는 방식에 대한 기본 동작을 정의합니다.
+Cross Axis 교차축 (주축에 수직)에 대한 justify-content 버전으로 생각하면 됩니다.
+
+1. display:flex 를 사용하면, Flex Container 가 된다. 
+
+2. align-items
+: flex-start : 수직 첫 줄 앞에 배치
+: flex- end : 수직 끝 줄 앞에 배치
+: center : 수직에서 중간 줄 앞에 배치
+: stretch : 길게 늘어뜨림
+: baseline : 베이스라인에 텍스트를 맞춰줌
+
+*/
+.container {
+  border: 6px solid lightblue;
+  display: flex;
+  height: 600px;
+  align-items: baseline;
+}
+
+.flex-item {
+  color: blue;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: lightcoral;
+  padding-bottom: 5rem;
+}
+
+.item-2 {
+  background-color: lightgoldenrodyellow;
+  padding-top: 5rem;
+}
+
+.item-3 {
+  background-color: lightseagreen;
+  padding-top: 10rem;
+}

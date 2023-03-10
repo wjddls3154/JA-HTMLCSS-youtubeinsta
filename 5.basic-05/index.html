@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html style="font-size: 20px">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1. em은 요소에 폰트 사이즈가 em 말고 px 값이 없다면, 가장 가까운 상위 요소의, 폰트 사이즈를 기준으로 변환이 된다.
+      여기선, 가장 가까운 상위 요소인 div의 사이즈 15px을 기준으로 변환한다.
+      1em = 15px, 2em = 30px
+      -->
+    <div style="font-size: 15px">
+      <span style="font-size: 2em">1em</span>
+      <span style="font-size: 1rem">1rem</span>
+      <!-- 2. rem은 요소에 폰트 사이즈가 em 말고 px 값이 없다면, 최상위 요소의 폰트 사이즈를 기준으로 변환이 된다.
+      여기선, 최상위 요소인 html의 사이즈 20px을 기준으로 변환한다.
+      1rem = 20px, 2rem = 40px
+      -->
+    </div>
+  </body>
+</html>
+<!-- 
+실제로는, rem 을 많이 사용한다.
+그 이유는, em 을 쓰면 여기에 되고, 또 다른데 있으면 다른데걸 가져오고 하니까 복잡하게 될수가 있다.
+
+반면, rem 은 한군데에서 가져오는거니까, 기준이 있는것이다.
+-->

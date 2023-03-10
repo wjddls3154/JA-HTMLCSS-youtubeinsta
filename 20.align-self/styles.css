@@ -1,0 +1,59 @@
+/*
+align-self 를 통해, 개별 플렉스 항목에 대해 기본 정렬(또는, align-items로 지정된 정렬)을 재정의할 수 있습니다.
+
+이전에 배운 align-items/content 는 부모 요소의 자식들 전체를 묶어서 정렬을 해주는 반면, 
+부모 요소의 자식 아이템들을, 각각 다른 방식으로 정렬하고 싶다면 (정렬을 개별로 설정하고 싶다면) align-self 를 사용합니다.
+이때, align-content 속성은 지워줘야 제대로 적용이 가능합니다.
+
+1. display:flex 를 사용하면, Flex Container 가 된다. 
+
+2. align-self
+: normal : 기본값
+: flex-start : 수직 첫 줄 앞에 배치
+: flex- end : 수직 끝 줄 앞에 배치
+: center : 수직에서 중간 줄 앞에 배치
+: stretch : 길게 늘어뜨림
+: baseline : 베이스라인에 텍스트를 맞춰줌
+
+*/
+.container {
+  border: 6px solid lightblue;
+  display: flex;
+  width: 600px;
+  height: 800px;
+  align-items: flex-end;
+}
+
+.flex-item {
+  color: blue;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: lightcoral;
+  align-self: flex-start;
+}
+
+.item-2 {
+  background-color: lightgoldenrodyellow;
+  align-self: center;
+}
+
+.item-3 {
+  background-color: lightseagreen;
+  align-self: stretch;
+}
+
+.item-4 {
+  background-color: lightcyan;
+}
+
+.item-5 {
+  background-color: lightgrey;
+}
+
+.item-6 {
+  background-color: lightgreen;
+}

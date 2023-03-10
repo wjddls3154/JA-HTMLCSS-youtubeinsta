@@ -1,0 +1,41 @@
+/*
+justify-content 는 주축을 따라 정렬을 정의합니다.
+한 줄의 모든 플렉스 항목이 유연하지 않거나, 유연하지만 최대 크기에 도달한 경우 남은 여유 공간을 분산하는 데 도움이 됩니다. 또한, items이 줄을 넘을 때 항목의 정렬을 제어합니다.
+
+1. display:flex 를 사용하면, Flex Container 가 된다. 
+
+2. justify-content 
+: flex-start : item 이 플렉스 시작 방향 부분에 패킹된다.
+: flex-end : item 이 플렉스 끝 방향 부분에 패킹된다.
+: center : : item 이 중앙 부분에 패킹된다.
+: space-between : 양 끝에 가고 중간에 모아줌
+: space-around : 외곽과 중간의 간격을 2배 차이로 띄어준다.
+: space-evenly : 같은 간격으로 띄어준다.
+
+space-around 와, space-evenly 는 겉으로 봤을때는 비슷해보이지만, 좀 더 자세히 보면 evenly 는 띄어지는 간격이 같고, around 는 바깥과 내부의 간격이 2배 차이가 난다.
+
+*/
+.container {
+  border: 6px solid lightblue;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-item {
+  color: blue;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: lightcoral;
+}
+
+.item-2 {
+  background-color: lightgoldenrodyellow;
+}
+
+.item-3 {
+  background-color: lightseagreen;
+}

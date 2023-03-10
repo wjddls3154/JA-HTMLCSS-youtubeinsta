@@ -1,0 +1,36 @@
+/*
+flex-direction 은, Main Axis 가 어떤 방향으로 가느냐에 따라서, flexitem 의 순서가 좌우되고, Main Axis 의 수직으로 Cross Axis 가 진행된다.
+
+1. display:flex 를 사용하면, Flex Container 가 된다. 
+
+2. flex-direction
+: row : 왼쪽에서 오른쪽으로 차례대로 1,2,3
+: row-reverse : 오른쪽에서 왼쪽으로 차례대로 1,2,3
+: column : 위에서부터 아래로 차례대로 1,2,3
+: column-reverse : 아래에서부터 위로 차례대로 1,2,3
+
+*/
+.container {
+  border: 3px solid lightblue;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.flex-item {
+  color: blue;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: lightcoral;
+}
+
+.item-2 {
+  background-color: lightgoldenrodyellow;
+}
+
+.item-3 {
+  background-color: lightseagreen;
+}

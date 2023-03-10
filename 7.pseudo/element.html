@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <!-- 
+      ::before 와 ::after 가 자주 쓰인다.
+
+      1. ::after : 요소의 콘텐츠 끝 부분에 생성된 콘텐츠를 추가.
+      2. li:last-of-type::after : li 요소 타입의 마지막 요소의, 끝부분에만 생성된 콘텐츠를 추가. 여기선 none으로 했으나, ' ' 공백으로도 사용 가능하다.
+      3. li:first-of-type::before : li 요소 타입의 첫 번째 요소의 콘텐츠 시작 부분에만 생성된 콘텐츠를 추가.
+
+      ::before : 요소의 콘텐츠 시작부분에 생성된 콘텐츠를 추가
+      ::after : 요소의 콘텐츠 끝부분에 생성된 콘텐츠를 추가
+      ::before 와, ::after 는 꼭 'content' 와 같이 쓰여야 하며, 이 content 는 '가짜' 속성이다.
+      HTML 문서에, 정보로 포함되지 않은 요소를, CSS에서 새롭게 생성시켜주는 역할을 한다.
+    -->
+    <style>
+      li {
+        float: left;
+        margin-right: 30px;
+        font-size: 32px;
+        list-style: none;
+      }
+
+      li::after {
+        content: ' |';
+      }
+
+      li:last-of-type::after {
+        content: none;
+      }
+
+      li:first-of-type::before {
+        content: '시작 ';
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+    </ul>
+  </body>
+</html>

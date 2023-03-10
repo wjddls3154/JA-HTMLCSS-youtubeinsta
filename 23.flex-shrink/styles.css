@@ -1,0 +1,50 @@
+/*
+
+flex-shrink : Flex 아이템이 축소되는 기능을 정의한다. ( 주로, 레이아웃을 벗어날 때 사용 )
+- flex-shrink 속성은, flex-wrap:wrap 속성을 부여한 경우에는 적용되지 않는다.
+- flex-shrink 속성의 기본 값은 1로 이미 적용이 되어 있는 상태이다.
+- flex-shrink 를 전체에다 사용할 수도 있고, 개별로 적용도 가능하다.
+
+1. display:flex 를 사용하면, Flex Container 가 된다. 
+
+2. flex-shrink : Flex 아이템이 축소되는 기능을 정의한다. ( 주로, 레이아웃을 벗어날 때 사용 )
+- flex-shrink 속성은, flex-wrap:wrap 속성을 부여한 경우에는 적용되지 않는다.
+- flex-shrink 속성의 기본 값은 1로 이미 적용이 되어 있는 상태이다.
+- flex-shrink 를 전체에다 사용할 수도 있고, 개별로 적용도 가능하다.
+*/
+.container {
+  border: 6px solid lightblue;
+  display: flex;
+  width: 400px;
+}
+
+.flex-item {
+  color: blue;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.item-1 {
+  background-color: lightcoral;
+}
+
+.item-2 {
+  background-color: lightgoldenrodyellow;
+}
+
+.item-3 {
+  background-color: lightseagreen;
+}
+
+.item-4 {
+  background-color: lightcyan;
+  flex-shrink: 1;
+}
+
+.item-5 {
+  background-color: lightgrey;
+}
+
+.item-6 {
+  background-color: lightgreen;
+}

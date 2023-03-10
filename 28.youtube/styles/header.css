@@ -1,0 +1,187 @@
+/* 
+- flex-direction : row 로 해놓은것은 메인축에 따라서 left-section, middle-section, right-section 순으로 하나씩 나열이 되기 때문이다.
+
+- justify-content : space-between 은, 만약 3개가 있다치면 1번째와 3번째는 양쪽 끝으로 붙고, 2번째꺼가 가운데로 오는 구조이다. 현재, 우리가 만드는 left-section, middle-section, right-section 의 구조와 같다.
+
+- position : fixed 는 헤더를 위에다가 고정해놓기 위해 한 것이다.
+
+- align-items : center 는 수직에서 높이를 중간으로 맞춰주기 위해서 사용한 것이다.
+*/
+.header {
+  height: 55px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/*
+left section
+*/
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.youtube-logo {
+  height: 70px;
+}
+
+/*
+middle section
+
+- flex: 1 로 하면, 단위가 없기 때문에 flex-grow 값이 되어서, flex item 들이 빈 공간을 꽉 채우게 한다.
+
+- 그래서, flex:1 을 줘서 middle-section 자체를 꽉 채우게 한거고, 그 안에 있는 공간도 남은 부분을 search-bar 가 꽉 채울 수 있게 flex:1 을 준 것이다.
+*/
+
+.middle-section {
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  height: 40px;
+  width: 66px;
+  background-color: #323232;
+  border-color: #4d4d4d;
+  margin-left: -1px;
+  margin-right: 10px;
+}
+
+.search-bar {
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid #4d4d4d;
+  border-radius: 2px;
+  background-color: #121212;
+  flex: 1;
+}
+
+.search-bar::placeholder {
+  font-size: 16px;
+}
+
+.search-icon {
+  height: 25px;
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 4px 8px 4px 8px;
+  bottom: -30px;
+  border-radius: 2px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip {
+  opacity: 1;
+}
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #121212;
+}
+
+.voice-search-icon {
+  height: 24px;
+}
+
+.upload-icon {
+  height: 24px;
+}
+
+.youtube-apps-icon {
+  height: 24px;
+}
+
+.notifications-icon {
+  height: 24px;
+}
+
+.current-user-picture {
+  height: 32px;
+  border-radius: 16px;
+}
+
+.search-icon {
+  height: 25px;
+}
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+}
+
+/*
+right section
+
+유튜브 알림에 위에 숫자 뜨게 하는것은, relative 안에 absolute 를 사용해서 만드는 것이다.
+*/
+
+.right-section {
+  width: 180px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notifications-icon-container {
+  position: relative;
+}
+
+.notifications-count {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  background-color: rgb(200, 0, 0);
+  color: white;
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+}

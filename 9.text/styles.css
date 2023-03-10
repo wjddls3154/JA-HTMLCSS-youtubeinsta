@@ -1,0 +1,24 @@
+/*
+font-family : Font(글꼴)를 변경한다.
+font-size : Font(글꼴)의 사이즈를 변경한다.
+font-weight : Font(글꼴) 굵기를 변경한다, bold 로도 사용가능하고, 숫자로도 설정이 가능하다.
+
+font-style : Font(글꼴) 스타일을 변경한다.
+text-align : 텍스트 정렬을 설정한다.
+ - text align 의 left 와 justify 는 얼핏 보면 비슷해보이지만, justify 의 띄어쓰기 간격이 양쪽을 맞추기 때문에 간격 자체가 좀 다르다.
+*/
+.a-text {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+
+  font-style: italic;
+  text-align: center;
+  line-height: 36px;
+
+  text-decoration: none;
+}
+
+.b-span-text {
+  text-decoration: underline;
+}

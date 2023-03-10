@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+      .table {
+        display: table;
+      }
+
+      .row {
+        display: table-row;
+      }
+
+      .cell {
+        display: table-cell;
+      }
+
+      .row,
+      .cell {
+        padding: 2px;
+      }
+
+      .container {
+        display: table;
+        width: 100%;
+        background-color: lightblue;
+      }
+
+      /* .box + .box 와 같은 요소 + 요소 선택자는,
+       뒤에 있는 두 번째 .box 요소를 선택한다는 말이다.  */
+      .container .box + .box {
+        border-left: 3px solid lightsalmon;
+      }
+
+      .container .box {
+        display: table-cell;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1번 예시
+    table 요소와, tr td 요소를 사용해서 만든 경우 ↓
+    -->
+    <table>
+      <tr>
+        <td>A</td>
+        <td>A</td>
+        <td>A</td>
+      </tr>
+
+      <tr>
+        <td>B</td>
+        <td>B</td>
+        <td>B</td>
+      </tr>
+
+      <tr>
+        <td>C</td>
+        <td>C</td>
+        <td>C</td>
+      </tr>
+    </table>
+
+    <!-- 2번 예시
+    display : table 속성을 사용해서 만든 경우 ↓
+    -->
+    <div class="table">
+      <div class="row">
+        <div class="cell">D</div>
+        <div class="cell">D</div>
+        <div class="cell">D</div>
+      </div>
+
+      <div class="row">
+        <div class="cell">E</div>
+        <div class="cell">E</div>
+        <div class="cell">E</div>
+      </div>
+
+      <div class="row">
+        <div class="cell">F</div>
+        <div class="cell">F</div>
+        <div class="cell">F</div>
+      </div>
+    </div>
+
+    <!-- 3번 예시 -->
+    <div class="container">
+      <div class="box">
+        <h3>제목</h3>
+        <p>도레미파솔라시도</p>
+      </div>
+
+      <div class="box">
+        <h3>제목</h3>
+        <p>도레미파솔라시도</p>
+      </div>
+
+      <div class="box">
+        <h3>제목</h3>
+        <p>도레미파솔라시도</p>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+      <div class="box">
+        <h3>제목</h3>
+        <p>도레미파솔라시도</p>
+      </div>
+
+      <div class="box">
+        <h3>제목</h3>
+        <p>도레미파솔라시도</p>
+      </div>
+
+      <div class="box">
+        <h3>제목</h3>
+        <p>도레미파솔라시도</p>
+      </div>
+
+      <div class="box">
+        <h3>제목</h3>
+        <p>도레미파솔라시도</p>
+      </div>
+    </div>
+  </body>
+</html>

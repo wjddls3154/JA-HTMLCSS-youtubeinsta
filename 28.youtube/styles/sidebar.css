@@ -1,0 +1,39 @@
+/* 
+- position : fixed 이용해서 좌측 위로 붙여줄 것이다.
+
+- top : 55px 띄어주는 이유는, 헤더때문이다. 헤더의 높이가 55px이라 그 아래에 오도록 하는 것.
+
+- flex-direction : column 으로 위에서 아래로 설정.
+*/
+.sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  background-color: #212121ff;
+  width: 72px;
+  z-index: 200;
+  padding-top: 5px;
+}
+
+.sidebar-link {
+  height: 74px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+  background-color: #4d4d4d;
+}
+
+.sidebar-link img {
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.sidebar-link div {
+  font-size: 10px;
+}

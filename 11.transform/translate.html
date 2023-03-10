@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <!-- 
+    transform-functions
+    - translate : 요소를 옆으로 또는 위아래로 이동시킨다.
+    아래에 사용한 코드는, 원래의 위치 (0, 0) 정보가 남아있고, 원래의 위치를 기반으로, x로는 20px, y로는 50px 만큼 이동한다는 말이다.
+    -->
+    <style>
+      .element {
+        display: inline-block;
+        background-color: lightblue;
+        height: 100px;
+        width: 100px;
+        animation: luke 3s infinite;
+      }
+
+      @keyframes luke {
+        0% {
+          transform: translate(0, 0);
+        }
+
+        100% {
+          transform: translate(20px, 50px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <div class="element"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </body>
+</html>

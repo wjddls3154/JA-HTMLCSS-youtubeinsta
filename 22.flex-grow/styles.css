@@ -1,0 +1,51 @@
+/*
+flex-grow
+- flex-grow 는, flexbox 아이템의 기본 너비를 자동으로 늘어나게 해서, 행 안에 적절한 너비로 배치되도록 맞추는 기능을 한다.
+- flex-grow 의 기본값은 0이다. 음수는 허용되지 않는다.
+- 만약, flex-grow 를 1로 설정하면, 컨테이너의 나머지 공간을 모든 자식에게 균등하게 분배가 되고,
+- flex 를 각각 다르게 주면, 각각의 원래 값 + 나머지 공간을 grow 의 비율만큼 추가로 분배가 된다.
+
+1. display:flex 를 사용하면, Flex Container 가 된다. 
+
+2. flex-grow : flexbox 아이템의 기본 너비를 자동으로 늘어나게 해서 행 안에 적절한 너비로 배치되도록 맞추는 기능을 한다.
+flex-grow 의 기본값은 0이다. 음수는 허용되지 않는다.
+
+*/
+.container {
+  border: 6px solid lightblue;
+  display: flex;
+}
+
+.flex-item {
+  color: blue;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  flex-grow: 0;
+}
+
+.item-1 {
+  background-color: lightcoral;
+}
+
+.item-2 {
+  background-color: lightgoldenrodyellow;
+  flex-grow: 1;
+}
+
+.item-3 {
+  background-color: lightseagreen;
+  flex-grow: 3;
+}
+
+.item-4 {
+  background-color: lightcyan;
+}
+
+.item-5 {
+  background-color: lightgrey;
+}
+
+.item-6 {
+  background-color: lightgreen;
+}

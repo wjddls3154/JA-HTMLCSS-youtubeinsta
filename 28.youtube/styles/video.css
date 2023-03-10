@@ -1,0 +1,80 @@
+.video-grid {
+  display: grid;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+/*
+웹을 반응형으로 만듬.
+
+- css 에서 중요한 부분은, 반응형을 구현해주어야 한다. 그래서, 미디어쿼리랑 grid 를 사용한다.
+
+- 미디어쿼리로, 최대 크기가 750px보다 작을 때, 최대 크기가 750px 보다 크고 999px보다 작을때, 최소 크기가 1000px보다 클 때, 상황마다 다른 크기로 지정해놓는다. 그리고, 보통일때는 1fr 1fr 1fr 3개의 크기로 해놓는다.
+*/
+
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+.video-time {
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+  background-color: black;
+}
+
+/* 프로필 사진(div)에 50px을 주고, 남은 길이(1fr)를 다른 정보가 다 포함된 div (제목,아이디,비디오스탯) 에 다 준 것이다. */
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 50px;
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: #aaaaaa;
+}

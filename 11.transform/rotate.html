@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <!-- 
+    transform-functions
+    - rotate : 요소를 현재 위치에서 시계 방향으로 회전합니다.
+    Rotate 는 회전의 각도가 +(양수)값이면 시계 방향으로 회전,
+     -(음수)값이면 시계 반대 방향으로 회전한다.
+    -->
+    <style>
+      .element {
+        display: inline-block;
+        background-color: lightblue;
+        height: 100px;
+        width: 100px;
+        animation: luke 3s infinite;
+        transform: rotate(30deg);
+      }
+
+      @keyframes luke {
+        0% {
+          transform: rotate(0);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="element"></div>
+    <div class="element"></div>
+    <div class="element"></div>
+  </body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/video.css" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
+  </head>
+
+  <body>
+    <!-- header 부분 작성-->
+    <header class="header">
+      <div class="left-section">
+        <img class="hamburger-menu" src="assets/icons/hamburger-menu.svg" />
+        <img class="youtube-logo" src="assets/icons/youtube-logo.svg" />
+      </div>
+
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search" />
+
+        <button class="search-button">
+          <img class="search-icon" src="assets/icons/search.svg" alt="" />
+          <div class="tooltip">Search</div>
+        </button>
+
+        <button class="voice-search-button">
+          <img
+            class="voice-search-icon"
+            src="assets/icons/voice-search-icon.svg"
+          />
+          <div class="tooltip">Search with your voice</div>
+        </button>
+      </div>
+
+      <div class="right-section">
+        <div class="upload-icon-container">
+          <img class="upload-icon" src="assets/icons/upload.svg" />
+          <div class="tooltip">Create</div>
+        </div>
+        <img class="youtube-apps-icon" src="assets/icons/youtube-apps.svg" />
+        <div class="notifications-icon-container">
+          <img
+            class="notifications-icon"
+            src="assets/icons/notifications.svg"
+          />
+          <div class="notifications-count">1</div>
+        </div>
+        <img
+          class="current-user-picture"
+          src="assets/images/avatars/avatar-1.png"
+        />
+      </div>
+    </header>
+
+    <!-- side bar 내용 작성 
+    div 하나를 만들고 복사 붙여넣기 해주는 식이다. 
+    UI 형태가 거의 같다.
+    -->
+    <nav class="sidebar">
+      <div class="sidebar-link">
+        <img src="assets/icons/home.svg" />
+        <div>Home</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img src="assets/icons/explore.svg" />
+        <div>Explore</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img src="assets/icons/subscriptions.svg" />
+        <div>Subscriptions</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img src="assets/icons/originals.svg" />
+        <div>Originals</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img src="assets/icons/youtube-music.svg" />
+        <div>Youtube Music</div>
+      </div>
+
+      <div class="sidebar-link">
+        <img src="assets/icons/library.svg" />
+        <div>Library</div>
+      </div>
+    </nav>
+
+    <!-- 비디오 생성하기 내용
+  - 하나를 만들고 복사 붙여넣기 해주는 식이다. UI가 거의 같다.
+  - thumbnail-row 클래스에, 비디오의 이미지와 비디오 시간이 들어가있다.
+  - 그리고, video-info-grid 클래스에, 프로필사진과 비디오 제목, 아이디, 비디오 스탯(뷰, 올린날짜) 내용이 들어가있다.
+  -->
+    <main>
+      <section class="video-grid">
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-1.jpg"
+            />
+            <div class="video-time">10:13</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-2.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">유연성이 건강에 중요한 이유</p>
+              <p class="video-author">healthKing</p>
+              <p class="video-stats">583 views &#183; 1 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-2.jpg"
+            />
+            <div class="video-time">48:20</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-3.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">비가 오면 듣기 좋은 노래모음</p>
+              <p class="video-author">뮤직애플박스</p>
+              <p class="video-stats">113,263 views &#183; 3 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-3.jpg"
+            />
+            <div class="video-time">11:41</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-4.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">연인과 오래가는 방법</p>
+              <p class="video-author">연애 사이 결혼</p>
+              <p class="video-stats">23 views &#183; 23 minutes ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-4.jpg"
+            />
+            <div class="video-time">5:48</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-5.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">아이들은 기억력은 어떻게 될까 ?</p>
+              <p class="video-author">baby Lover</p>
+              <p class="video-stats">123 views &#183; 4 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-5.jpg"
+            />
+            <div class="video-time">19:38</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-6.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">일백 이백 삼백이의 하루</p>
+              <p class="video-author">백주인</p>
+              <p class="video-stats">1,443 views &#183; 3 hours ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-6.jpg"
+            />
+            <div class="video-time">57:28</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-7.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">2023 한국 락 밴드 노래모음</p>
+              <p class="video-author">로쿠밴드 아이묭</p>
+              <p class="video-stats">100,223 views &#183; 2 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-7.jpg"
+            />
+            <div class="video-time">12:20</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-8.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">
+                3명이서 오토바이를 타는것은 교통법 위반일까 ?
+              </p>
+              <p class="video-author">교통법 교문철</p>
+              <p class="video-stats">2,103 views &#183; 8 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-8.jpg"
+            />
+            <div class="video-time">3:13</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-9.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">고양이에게 간택받는 방법</p>
+              <p class="video-author">고양이와 집사</p>
+              <p class="video-stats">133,983 views &#183; 6 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-9.jpg"
+            />
+            <div class="video-time">8:10</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-10.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">당신은 결혼을 원합니까 ?</p>
+              <p class="video-author">플러팅장인</p>
+              <p class="video-stats">113 views &#183; 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-10.jpg"
+            />
+            <div class="video-time">5:35</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-11.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">어떻게 물 위에 서있을 수 있을까 ?</p>
+              <p class="video-author">과학박사 김박사</p>
+              <p class="video-stats">583 views &#183; 3 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-11.jpg"
+            />
+            <div class="video-time">18:27</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-12.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">베트남 여행 Vlog</p>
+              <p class="video-author">pretty걸</p>
+              <p class="video-stats">5,487 views &#183; 2 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img
+              class="thumbnail"
+              src="assets/images/thumbnails/thumbnail-12.jpg"
+            />
+            <div class="video-time">10:43</div>
+          </div>
+
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img
+                class="profile-picture"
+                src="assets/images/avatars/avatar-13.jpg"
+              />
+            </div>
+
+            <div class="video-info">
+              <p class="video-title">당신의 눈은 어떻게 생겼나요 ?</p>
+              <p class="video-author">궁금증을 풀어드립니다</p>
+              <p class="video-stats">1003 views &#183; 2 months ago</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

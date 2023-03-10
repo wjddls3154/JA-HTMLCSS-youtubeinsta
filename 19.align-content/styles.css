@@ -1,0 +1,57 @@
+/*
+1. display:flex 를 사용하면, Flex Container 가 된다. 
+
+2. align-content : 두 줄 이상 일때만 사용하는데 의미가 있다. 
+( 통째로 움직인다. )
+원래 기본값은, 아무리 요소가 많아도 한줄로 되기때문에, flew-wrap : wrap 을 먼저하고, align-content 를 사용해야 적용이 된다.
+즉, align-content 는 수직축의 라인을 기준으로 (두 줄 이상 일때만) 라인 자체가 정렬이 됩니다.
+
+: normal : 기본값
+: flex-start : 통째로 위로 올라감
+: flex- end : 통째로 아래로 내려감
+: center : 통째로 가운데로 감
+: space-between : 통째로 위 아래 가운데로 나뉨
+: space-around  : 각 줄 주위에 동일한 간격으로 균등하게 분포
+: space-evenly : 아이템이 주변에 동일한 공간으로 고르게 분포
+: stretch : 나머지 공간을 차지하도록 선을 늘림
+
+*/
+.container {
+  border: 6px solid lightblue;
+  display: flex;
+  width: 500px;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.flex-item {
+  color: blue;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: lightcoral;
+}
+
+.item-2 {
+  background-color: lightgoldenrodyellow;
+}
+
+.item-3 {
+  background-color: lightseagreen;
+}
+
+.item-4 {
+  background-color: lightcyan;
+}
+
+.item-5 {
+  background-color: lightgrey;
+}
+
+.item-6 {
+  background-color: lightgreen;
+}

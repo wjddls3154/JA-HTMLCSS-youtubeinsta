@@ -1,0 +1,54 @@
+/*
+flex의 디폴트 특징대로라면, 아이템 개수가 늘어나면 어떻게든 한 줄에 포함시키기위해서 아이템의 크기가 줄어들 것이다.
+하지만, flex-wrap 설정을 해주면 줄 바꿈이 일어난다.
+
+1. display:flex 를 사용하면, Flex Container 가 된다. 
+
+2. flex-direction
+: row : 왼쪽에서 오른쪽으로 차례대로 1,2,3
+: row-reverse : 오른쪽에서 왼쪽으로 차례대로 1,2,3
+: column : 위에서부터 아래로 차례대로 1,2,3
+: column-reverse : 아래에서부터 위로 차례대로 1,2,3
+
+3. flex-wrap
+: nowrap : 기본값이어서, 원래처럼 모든 플렉스 항목이 한 줄에 표시.
+: wrap : 플렉스 아이템이 한 줄이 다 차면 아래로 줄바꿈됩니다.
+: wrap-reverse : 플렉스 아이템이 한 줄이 다 차면 위로 줄바꿈됩니다.
+*/
+.container {
+  border: 6px solid lightblue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+.flex-item {
+  color: blue;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: lightcoral;
+}
+
+.item-2 {
+  background-color: lightgoldenrodyellow;
+}
+
+.item-3 {
+  background-color: lightseagreen;
+}
+
+.item-4 {
+  background-color: lightcyan;
+}
+
+.item-5 {
+  background-color: lightgrey;
+}
+
+.item-6 {
+  background-color: lightgreen;
+}

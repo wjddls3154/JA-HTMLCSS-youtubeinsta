@@ -1,0 +1,56 @@
+/*
+order 
+- 기본적으로는, order 의 속성 값이 0으로 설정되어있다.
+- order(순서)가 크면 뒤로 가고, order(순서) 가 작으면 앞으로 간다. 음수도 사용이 가능하다.
+- 위 아래도 마찬가지이다. order(순서)가 클수록 아래로 가고, order(순서) 가 작으면 위로 간다.
+
+1. display:flex 를 사용하면, Flex Container 가 된다. 
+
+2. align-self
+: normal : 기본값
+: flex-start : 수직 첫 줄 앞에 배치
+: flex- end : 수직 끝 줄 앞에 배치
+: center : 수직에서 중간 줄 앞에 배치
+: stretch : 길게 늘어뜨림
+: baseline : 베이스라인에 텍스트를 맞춰줌
+
+*/
+.container {
+  border: 6px solid lightblue;
+  display: flex;
+  width: 600px;
+  height: 800px;
+}
+
+.flex-item {
+  color: blue;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-1 {
+  background-color: lightcoral;
+}
+
+.item-2 {
+  background-color: lightgoldenrodyellow;
+  order: -1;
+}
+
+.item-3 {
+  background-color: lightseagreen;
+}
+
+.item-4 {
+  background-color: lightcyan;
+}
+
+.item-5 {
+  background-color: lightgrey;
+  order: 2;
+}
+
+.item-6 {
+  background-color: lightgreen;
+}

@@ -1,0 +1,66 @@
+/*
+원래 너비(width) 와 높이(height) 를 모두 설정하면, 이미지가 늘어나거나 줄어들거나 왜곡될 수 있다. 이때, 이미지가 늘어나거나 줄어들거나 왜곡되지 않게 해주는 것이 object-fit 이다.
+
+1. object-fit : 이미지 또는 비디오 크기를 조정하는 방법
+: fill - 기본값
+: cover - 종횡비는 유지하고, 이미지의 크기에 맞게 잘린다.
+: contain - 종횡비를 유지하고, 주어진 치수에 맞게 이미지의 크기도 조정된다.
+: none - 크기가 조정되지 않는다.
+: scale-down -이미지가 none 포함해서, 가장 작은 버전으로 축소된다.
+
+너비와 높이는 같고 object-fit 의 옵션만 다르게 주었을 때 ↓
+*/
+.image1 {
+  width: 400px;
+  height: 400px;
+
+  object-fit: fill;
+}
+.image2 {
+  width: 400px;
+  height: 400px;
+
+  object-fit: cover;
+}
+.image3 {
+  width: 400px;
+  height: 400px;
+
+  object-fit: contain;
+}
+.image4 {
+  width: 400px;
+  height: 400px;
+
+  object-fit: none;
+}
+.image5 {
+  width: 400px;
+  height: 400px;
+
+  object-fit: scale-down;
+}
+
+/*
+object-position 은, 주로 배치하는 방법을 지정하는데 사용된다.
+2. object-position : 이미지 또는 비디오를 배치하는 방법
+: left - 왼쪽 부분으로 이동해서, 오른쪽부분은 잘린다. 
+: right - 오른쪽 부분으로 이동해서, 왼쪽부분은 잘린다.
+
+너비와 높이는 같고 object-position 의 옵션만 다르게 주었을 때 ↓
+*/
+.image6 {
+  width: 400px;
+  height: 400px;
+
+  object-fit: cover;
+  object-position: left;
+}
+
+.image7 {
+  width: 400px;
+  height: 400px;
+
+  object-fit: cover;
+  object-position: right;
+}

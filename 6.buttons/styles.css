@@ -1,0 +1,238 @@
+/* css 주석 처리
+1. background-color : 백그라운드 색을 지정합니다.
+2. color : 텍스트 색을 지정합니다.
+3. border : none : border를 제거합니다.
+4. border-radius : 둥근 모서리를 만듭니다.
+5. cursor : pointer : 요소 위로 마우스를 가져갈 때 마우스 커서를 변경합니다.
+6,7. margin-right,left : 바깥쪽 오른쪽과 왼쪽 여백
+8,9,10,11. padding-top,bottom,left,right : 안쪽 위,아래,왼쪽,오른쪽 여백
+12. transition : 선택자가 변화되는 것을, 시간의 흐름을 줘서 변화시키는 속성이다. 이것을 사용하면, 스타일 변경할 때 부드럽게 전환하게 한다. ( 흔히, 호버링할 때 사용된다. )
+형식 : transition : <속성> <속도 지연시간>
+13. vertical-align
+
+14. :hover : 이 스타일은, 마우스를 요소에 가져갈때만 적용.
+15. :active : 이 스타일은, 요소를 클릭할 때만 적용.
+hover와 active에 쓰이는 opacity는 불투명도 설정이다. 일반적으로 보이는 것은 1에 해당하고, 0으로 설정하면 안보인다. 0.~ 은 흐려진다.
+*/
+
+/* 
+버튼 1 : hover 했을 때 바로 불투명해지고, active 했을 때 바로 더 불투명해지는 정도의 기능만 가지고 있는 기본 버튼
+*/
+.a-button1 {
+  background-color: rgb(20, 40, 192);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.a-button1:hover {
+  opacity: 0.7;
+}
+
+.a-button1:active {
+  opacity: 0.3;
+}
+
+/*
+버튼 2 : 버튼 1의 기능에서 + transition 내용만 추가.
+opacity(불투명도) 속성을 3s(초) 로 설정해서,
+hover가 3초에 거쳐서 불투명해지고, active 가 3초에 거쳐서 불투명해진다. 
+ */
+.a-button2 {
+  background-color: rgb(20, 40, 192);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: opacity 3s;
+}
+
+.a-button2:hover {
+  opacity: 0.7;
+}
+
+.a-button2:active {
+  opacity: 0.3;
+}
+
+/* 
+버튼 3 : 버튼 2의 기능에서 transition 내용만 변경. background-color 속성을 3s(초) 로 설정하고, hover에 background-color를 설정하면, hover를 했을 때, 3초에 거쳐서 파란색 → 핑크색으로 색이 변화한다.   
+*/
+.a-button3 {
+  background-color: rgb(20, 40, 192);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: background-color 3s;
+}
+
+.a-button3:hover {
+  opacity: 0.7;
+  background-color: pink;
+}
+
+.a-button3:active {
+  opacity: 0.3;
+}
+
+/* 
+버튼 4 : transition 버튼 2의 기능 (opacity 적용) 과 + 버튼 3의 기능 (background-color 적용) 을 쉼표를 이용해서, 동시에 적용도 가능하다는 것을 보여주는 버튼. 
+*/
+.a-button4 {
+  background-color: rgb(20, 40, 192);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: opacity 3s, background-color 3s;
+}
+
+.a-button4:hover {
+  opacity: 0.7;
+  background-color: green;
+}
+
+.a-button4:active {
+  opacity: 0.3;
+}
+
+/* 
+버튼 5 : 버튼 4의 transition 에서 ease-in(가속 감속) 속성만 추가.
+
+가속, 감속 기능 종류
+- ease : 기본값, 느리게 시작한 다음 빠르게 전환한 다음 천천히 종료
+- linear : 처음부터 끝까지 같은 속도로 전환
+- ease-in : 느린 시작으로 빠른 끝, 느린 느낌을 받음
+- ease-out : 빠른 시작으로 느린 끝, 빠른 느낌을 받음
+- ease-in-out : 느린 시작과 느린 끝으로 전환 효과 지정
+- cubic-bezier(n,n,n,n) : 3차 베지어 함수에서 자신의 값 임의로 정함
+cubic-bezier는, 위의 것들은 정해져있는 반면, 커스텀으로 n에 숫자를 직접 넣어서 속도를 다르게 해줄수가 있다.
+*/
+.a-button5 {
+  background-color: rgb(20, 40, 192);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: opacity 3s, background-color 3s ease-in;
+}
+
+.a-button5:hover {
+  opacity: 0.7;
+  background-color: purple;
+}
+
+.a-button5:active {
+  opacity: 0.3;
+}
+
+/*
+버튼 6 : 그리고, transition 사용할 때, 앞에 all 을 붙여서, 모든 변화 속성에 일체 적용도 가능하다는 것을 보여주는 버튼.
+*/
+.a-button6 {
+  background-color: rgb(20, 40, 192);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: all 2s ease-in;
+}
+
+.a-button6:hover {
+  opacity: 0.7;
+  background-color: orange;
+}
+
+.a-button6:active {
+  opacity: 0.3;
+}
+
+/*
+B 버튼 : 위에 한 내용말고 별거없음.
+*/
+.b-button {
+  background-color: white;
+  border-color: rgb(212, 6, 64);
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(6, 95, 212);
+  border-radius: 2px;
+  cursor: pointer;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: background-color 3s, color 0.15s;
+}
+
+.b-button:hover {
+  background-color: rgb(6, 95, 212);
+  color: white;
+}
+
+.b-button:active {
+  opacity: 0.7;
+}
+
+/*
+C 버튼 : box-shadow 라는, 새로운 속성 사용한 버튼
+box-shadow : 5px 6px 7px black 은
+요소에 오른쪽으로 5px, 아래쪽으로 6px, 흐림 7px, 검정색으로 그림자를 만든다는 이야기다.
+다른 예) box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5)
+*/
+
+.c-button {
+  background-color: rgb(25, 69, 98);
+  color: white;
+  border: none;
+  height: 36px;
+  width: 74px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 1s ease-out;
+}
+
+.c-button:hover {
+  box-shadow: 5px 6px 7px black;
+}

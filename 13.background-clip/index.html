@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <!-- background-clip 속성은 요소 내에서 배경(색상 또는 이미지)이 확장되어야 하는 거리를 정의합니다.
+    - border-box : 배경이 테두리까지 확장된다.
+    - padding-box : 배경이 패딩 부분까지 확장된다.
+    - content-box : 배경이 내용 부분만 확장된다.
+    - initial : 기본값으로 설정합니다.
+    - inherit : 부모 요소의 속성 값을 상속받습니다.
+      -->
+    <style>
+      #example1 {
+        border: 10px dotted green;
+        padding: 15px;
+        background-color: lightsalmon;
+        background-clip: border-box;
+      }
+
+      #example2 {
+        border: 10px dotted black;
+        padding: 15px;
+        background-color: lightblue;
+        background-clip: padding-box;
+      }
+
+      #example3 {
+        border: 10px dotted red;
+        padding: 15px;
+        background-color: lightgoldenrodyellow;
+        background-clip: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <p>background-clip : border-box (this is default)</p>
+    <div id="example1">
+      <p>The background extends behind the border.</p>
+    </div>
+
+    <p>background-clip : padding-box:</p>
+    <div id="example2">
+      <p>The background extends to the inside edge of the border.</p>
+    </div>
+
+    <p>background-clip : content-box:</p>
+    <div id="example3">
+      <p>The background extends to the edge of the content box.</p>
+    </div>
+  </body>
+</html>

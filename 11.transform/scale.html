@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <!-- 
+    transform-functions
+    - scale : 요소의 크기에 영향을 줍니다.
+- scale 은 0 이나 양수가 들어가고, 배로 늘어난다.
+- scale(1.0) 은 원래 크기이고, scale(0.5) 는 50% 줄인것이다.
+Ex) scale 1 이 width : 200px 이면, scale 2 는 width : 400px 이 된다. 배수로 늘어난다.
+- scale 은 부모요소에 적용하면, 하위 자식 요소까지 적용을 해줘서, 페이지 전체 확대나 축소에도 사용한다.
+    -->
+    <style>
+      .box {
+        border: 2px solid lightblue;
+        width: 200px;
+        height: 200px;
+        transition-duration: 2s;
+        transform: scale(1);
+      }
+
+      .box:hover {
+        transform: scale(0.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

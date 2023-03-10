@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <!-- 
+    가상 클래스 사용해보기
+    
+    :first-child 와 :first-of-type 비교 설명
+    1. first-child : 모든 자식 태그 요소 중에서 첫 번째 자식 요소 
+    여기선, parent 클래스의 first-child 는 <span>이다.
+    2. first-of-type : 모든 자식 요소 중에서 첫 번째 특정 요소
+    첫 번째 <p>가 부모 <div>의 두 번째 자식요소여서 first-child는 적용이 안되지만, <p> 태그중에서는 첫 번째이기에 first-of-type은 적용이 된다.
+
+    3. :hover : 마우스를 가져다댔을 때
+    4. :focus : 태그가 포커스 되었을 때
+
+    5. 자식결합자(>) :
+    여기 예시에선, container-two > div 식으로 사용됐는데, 자식결합자를 사용하면, container-two 에서 div 들을 같이 선택을 하는 것이다.
+    6. container-two > div:nth-child(2n+1) 은 container-two 의 자식 요소 중 홀수 번째를 말하는 것.
+    7. container-two > div:last-child 는 container-two 의 마지막 자식 요소를 말하는 것.
+    -->
+    <style>
+      .parent span:first-child {
+        color: lightpink;
+      }
+      .parent p:first-of-type {
+        color: lightskyblue;
+      }
+
+      .container {
+        background-color: lightblue;
+        padding: 10px;
+        margin-bottom: 30px;
+      }
+
+      .container:hover {
+        background-color: lightcoral;
+      }
+
+      .focus-input:focus {
+        background-color: lightgreen;
+      }
+
+      .container-two > div {
+        margin-top: 30px;
+        background-color: lightpink;
+        width: 100px;
+        height: 100px;
+        float: left;
+      }
+
+      .container-two > div:nth-child(2n + 1) {
+        background-color: lightskyblue;
+      }
+
+      .container-two > div:last-child {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <span>A</span>
+      <p>B</p>
+      <p>C</p>
+
+      <div class="container container-box">Mouse Hover</div>
+
+      <input class="focus-input" type="text" />
+
+      <div class="container-two">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

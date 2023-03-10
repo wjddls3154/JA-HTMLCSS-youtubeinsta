@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .grid-container {
+        margin-top: 3rem;
+        display: grid;
+        background-color: antiquewhite;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+      }
+
+      .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    Grid CSS는, Flex Box(1차원) 와 다르게 2차원의 레이아웃 시스템이다.  
+
+    Grid CSS 속성  
+    1. display : grid 로 옵션을 주면, grid-container 형태가 됨
+    2. grid-template-columns : 각 column 의 값을 지정할 수 있다.그 사이의 공간은 grid line 격자선을 나타낸다.
+    3. grid-template-rows : 각 row 의 값을 지정할 수 있다. 그 사이의 공간은 grid line 격자선을 나타낸다.
+    4. gap : 얼마 px만큼 띄어줄것인지 정하는 것이다.
+    ( 종류로는, Column Gap 과 Row Gap 이 있다. )
+
+    보조 속성
+    1. repeat : 반복횟수와 크기를 지정해서 사용할 수 있다.
+    2. fr : 1fr 은 사용 가능한 공간의 1에 해당하는 부분 ( 사용 가능한 공간에 대한 비율 )
+    
+    Ex1) grid-template-columns : repeat(5, 1fr);
+    이 예시는, 각 column 5개를 똑같은 사이즈로 모두 채우는 것이다.
+
+    Ex2) 
+    width : 800px
+    grid-template-columns : 300px 10% 1fr 1fr;
+    이 예시는, 300px 로 채우고, 800px의 10%인 80px로 채우고, 남은 420px을 1fr 1fr 나눠가져야하니 210px씩 채우는 것이다.
+    
+
+  - display : grid 로 옵션을 주면, grid-container 의 형태가 된다.
+
+  - grid-template-columns 을 auto auto auto 로 주면, 하나의 row에 3개의 column이 들어간다.
+
+  - 그리고 grid-column(세로)-start 를 1로 주고 end 를 3으로 주면, 1부터 ~ 3까지 column(가로) 넓이가 늘어난다.
+    -->
+
+    <div style="display: grid; grid-template-columns: 100px 100px">
+      <div style="background-color: lightblue">div 1</div>
+      <div style="background-color: lightcoral">div 2</div>
+    </div>
+
+    <div
+      style="
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 100px 100px 200px;
+      "
+    >
+      <div style="background-color: lightblue">div 1</div>
+      <div style="background-color: lightcyan">div 1</div>
+      <div style="background-color: lightcoral">div 1</div>
+    </div>
+
+    <div
+      style="
+        margin-top: 30px;
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: 100px 1fr 2fr;
+      "
+    >
+      <div style="background-color: lightblue">div 1</div>
+      <div style="background-color: lightcyan">div 1</div>
+      <div style="background-color: lightcoral">div 1</div>
+    </div>
+
+    <div class="grid-container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+      <div class="item6">6</div>
+      <div class="item7">7</div>
+      <div class="item8">8</div>
+      <div class="item9">9</div>
+    </div>
+  </body>
+</html>
